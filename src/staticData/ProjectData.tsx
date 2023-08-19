@@ -1,4 +1,9 @@
 import deconXImage from "../Images/DeconX.png";
+import AspInterpreter from "../Images/AspInterpreter.png";
+import Bewere from "../Images/Bewere.png";
+import Tise from "../Images/Tise.png";
+import NG from "../Images/NG.png";
+
 
 export const STATIC_PROJECT_DATA = [
   {
@@ -22,7 +27,7 @@ export const STATIC_PROJECT_DATA = [
     knowledgeText:
       "Acquired Knowledge: Team software development, teamwork, agile practices, documentation of development elements (modeling, requirements specifications, evaluation, and product, test, user, and process documentation), Android Studio, Kotlin, Xml, Json, Git, Jira.",
     link: "https://gitfront.io/r/AndreaHelmersen/MsD28eJ9hebs/Bewere/",
-    //image: bewereImage, // Provide the image URL for Bewere
+    image: Bewere, 
     workedOn: "Spring 2022",
   },
   {
@@ -32,20 +37,19 @@ export const STATIC_PROJECT_DATA = [
     knowledgeText:
       "Acquired Knowledge: Java, pair programming, collaboration, object-oriented programming in larger projects, use of modules in larger projects, debugging, interpreting and understanding code written by others.",
     link: "https://gitfront.io/r/AndreaHelmersen/18ef300e5e098d17360269ff8f91dba72998652a/Asp-Interpreter/",
-    //image: aspInterpreterImage, // Provide the image URL for the ASP Interpreter project
+    image: AspInterpreter, 
     workedOn: "Autumn 2021",
   },
   {
     title: "Digital Transformation of NG",
     projectText:
       "The project focused on formulating measures for a digital transformation of Norsk Gjenvinning. In this project, we worked on formulating changes in NG to achieve a desired future. In this context, resistance to change is highly relevant, which I found to be one of the most interesting aspects of the task.",
-
     companyText:
       "In this project we worked with Norsk gjenvinning (NG), translated to Norwegian Recycling",
     knowledgeText:
       "Acquired Knowledge: Digital transformation, change management and resistance, assessment of organizational culture and environments, formulation of measures to achieve a desired future (measures for structure, leadership, and change strategy), teamwork.",
     link: "https://gitfront.io/r/AndreaHelmersen/d3d9f53f86a99d61ab5f529f4298894952e66a2b/Digital-transformasjon-av-NG/",
-    //image: ngDigitalTransformationImage, // Provide the image URL for the NG Digital Transformation project
+    image: NG,
     workedOn: "Autumn 2021",
   },
   {
@@ -55,7 +59,7 @@ export const STATIC_PROJECT_DATA = [
     knowledgeText:
       "Acquired Knowledge: Analysis of microenvironments, assessment of competitive advantages ('Sweet Spot'), market segmentation, market research, marketing plan development, teamwork.",
     link: "gitfront.io/r/AndreaHelmersen/1c2a35fad9c12503c16a010c281db885c3387e9c/Prosjektoppgave-Tise/",
-    //image: tiseSpring2021Image, // Provide the image URL for the Tise Spring 2021 project
+    image: Tise, 
     workedOn: "Spring 2021",
   },
 ];
