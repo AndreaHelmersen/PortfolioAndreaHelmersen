@@ -24,27 +24,33 @@ export const ProjectCard = (props: ProjectCardProps) => {
   return (
     <div style={{ display: "flex", padding: "50px" }}>
       <div style={{ width: "70%" }}>
-        <Typography variant="h3" style={corbelFontStyle}>
-          {props.title}
-        </Typography>
-        <Typography variant="h6" style={corbelFontStyle}>
-          {props.workedOn}
-        </Typography>
+      <div style={{ display: "flex", alignItems: "baseline" }}>
+          <div style={{ flex: 1 }}>
+            <Typography variant="h3" style={corbelFontStyle}>
+              {props.title}
+            </Typography>
+          </div>
+          <Typography variant="h6" style={corbelFontStyle}>
+            {props.workedOn}
+          </Typography>
+        </div>
+
+        <hr style={{ width: "100%", border: "1px solid #ccc" }} /> 
 
         <div style={corbelFontStyle}>
-          <Typography variant="h6" sx={{ pt: "8px" }}>
+          <Typography sx={{ pt: "10px", fontWeight: "800" }}>
             The Project
           </Typography>
           <Typography>{props.projectText}</Typography>
 
-          <Typography variant="h6" sx={{ pt: "8px" }}>
+          <Typography sx={{ pt: "15px", fontWeight: "800" }}>
             {props.ideaText ? "The Idea" : "The Company"}
           </Typography>
           <Typography>
             {props.ideaText ? props.ideaText : props.companyText}
           </Typography>
 
-          <Typography variant="h6" sx={{ pt: "8px" }}>
+          <Typography sx={{ pt: "16px", fontWeight: "800" }}>
             Acquired Knowledge
           </Typography>
           <Typography>{props.knowledgeText}</Typography>
