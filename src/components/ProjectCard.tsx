@@ -75,11 +75,17 @@ export const ProjectCard = (props: ProjectCardProps) => {
       </div>
 
       {props.image && (
-        <div style={{ width: "30%", margin: "20px", overflow: "hidden" }}>
+        <div style={{ width: "600px", margin: "20px" }}>
           <img
             src={props.image}
             alt="Project Image"
-            style={{ width: "100%", height: "auto" }}
+            style={{
+              maxWidth: "100%",
+              height: "auto",
+              maxHeight: "400px",
+              display: "block",
+              margin: "0 auto",
+            }}
           />
         </div>
       )}
