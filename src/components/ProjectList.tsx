@@ -12,9 +12,9 @@ export const ProjectList = () => {
         <Typography
           variant="h1"
           style={corbelFontStyle}
-          sx={{ fontWeight: "800" }}
+          sx={{ fontWeight: "700" }}
         >
-          Projects
+          PROJECTS
         </Typography>
       </div>
 
