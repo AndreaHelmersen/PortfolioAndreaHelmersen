@@ -20,7 +20,7 @@ export const PortfolioHeader = () => {
       >
         <div style={{ textAlign: "center" }}>
           <Typography
-            variant="h3"
+            variant="h4"
             style={corbelFontStyle}
             sx={{ fontWeight: "800", pt: "150px" }}
           >
@@ -37,12 +37,12 @@ export const PortfolioHeader = () => {
             }}
           />
 
-          <Typography variant="h4" style={corbelFontStyle}>
+          <Typography variant="h6" style={corbelFontStyle}>
             Andrea Arstad Helmersen
           </Typography>
-          <div style={{ paddingTop: "100px" }}>
+          <div style={{ paddingTop: "100px", textAlign: "center" }}>
             <Grid container spacing={2}>
-              <Grid item xs={12} sm={6} md={4}>
+              <Grid item xs={12} style={{ display: "block" }}>
                 <Typography variant="body1" style={corbelFontStyle}>
                   <Link
                     href="https://www.linkedin.com/in/andrea-arstad-helmersen/"
@@ -54,7 +54,14 @@ export const PortfolioHeader = () => {
                   </Link>
                 </Typography>
               </Grid>
-              <Grid item xs={12} sm={6} md={4}>
+
+              <Grid item xs={12} style={{ display: "block" }}>
+                <Typography variant="body1" style={corbelFontStyle}>
+                  +47 46792692
+                </Typography>
+              </Grid>
+
+              <Grid item xs={12} style={{ display: "block" }}>
                 <Typography variant="body1" style={corbelFontStyle}>
                   <a
                     href="mailto:andrea.helmersen@gmail.com"
@@ -62,11 +69,6 @@ export const PortfolioHeader = () => {
                   >
                     andrea.helmersen@gmail.com
                   </a>
-                </Typography>
-              </Grid>
-              <Grid item xs={12} sm={6} md={4}>
-                <Typography variant="body1" style={corbelFontStyle}>
-                  +47 46792692
                 </Typography>
               </Grid>
             </Grid>
