@@ -1,5 +1,4 @@
-import { Typography, Link } from "@mui/material";
-import { useEffect, useState } from "react";
+import { Typography, Link, Paper, Box, Card, Grid } from "@mui/material";
 
 export const PortfolioHeader = () => {
   const corbelFontStyle = {
@@ -7,43 +6,21 @@ export const PortfolioHeader = () => {
     color: "Black",
   };
 
-  const [scrollY, setScrollY] = useState(0);
-
-  const handleScroll = () => {
-    setScrollY(window.scrollY);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const flipAngle = -scrollY / 5;
-
-  const transformStyle = {
-    transform: `perspective(1200px) rotateX(${flipAngle}deg)`,
-    transition: "transform 0.3s",
-  };
-
   return (
     <div style={{ padding: "50px" }}>
-      <div
+      <Card
         style={{
-          ...transformStyle,
-          padding: "50px 0",
-          minHeight: "85vh",
+          width: "80vw",
+          padding: "5%", // Adjust padding for responsiveness
+          minHeight: "50vh",
           backgroundColor: "#F9CB81",
-          transformOrigin: "top center",
-          borderRadius: "20px", // Add rounded corners
-          boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)", // Add a subtle shadow
+          borderRadius: "20px",
+          boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)",
         }}
       >
         <div style={{ textAlign: "center" }}>
           <Typography
-            variant="h1"
+            variant="h3"
             style={corbelFontStyle}
             sx={{ fontWeight: "800", pt: "150px" }}
           >
@@ -64,33 +41,38 @@ export const PortfolioHeader = () => {
             Andrea Arstad Helmersen
           </Typography>
           <div style={{ paddingTop: "100px" }}>
-            <Typography variant="body1" style={corbelFontStyle}>
-              <Link
-                href="https://www.linkedin.com/in/andrea-arstad-helmersen/"
-                target="_blank"
-                rel="noopener noreferrer"
-                color="inherit"
-              >
-                LinkedIn
-              </Link>
-            </Typography>
-
-            <Typography variant="body1" style={corbelFontStyle}>
-              {" "}
-              <a
-                href="mailto:andrea.helmersen@gmail.com"
-                style={{ color: "black", textDecoration: "none" }}
-              >
-                andrea.helmersen@gmail.com
-              </a>
-            </Typography>
-
-            <Typography variant="body1" style={corbelFontStyle}>
-              +47 46792692
-            </Typography>
+            <Grid container spacing={2}>
+              <Grid item xs={12} sm={6} md={4}>
+                <Typography variant="body1" style={corbelFontStyle}>
+                  <Link
+                    href="https://www.linkedin.com/in/andrea-arstad-helmersen/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    color="inherit"
+                  >
+                    LinkedIn
+                  </Link>
+                </Typography>
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <Typography variant="body1" style={corbelFontStyle}>
+                  <a
+                    href="mailto:andrea.helmersen@gmail.com"
+                    style={{ color: "black", textDecoration: "none" }}
+                  >
+                    andrea.helmersen@gmail.com
+                  </a>
+                </Typography>
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <Typography variant="body1" style={corbelFontStyle}>
+                  +47 46792692
+                </Typography>
+              </Grid>
+            </Grid>
           </div>
         </div>
-      </div>{" "}
+      </Card>
     </div>
   );
 };
