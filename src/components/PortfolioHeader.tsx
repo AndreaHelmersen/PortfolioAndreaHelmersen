@@ -1,4 +1,4 @@
-import { Typography, Link, Paper, Box, Card, Grid } from "@mui/material";
+import { Typography, Link, Card, Grid } from "@mui/material";
 
 export const PortfolioHeader = () => {
   const corbelFontStyle = {
