@@ -1,4 +1,4 @@
-import { Card, Grid, Typography } from "@mui/material";
+import { Card, Grid, Link, Typography } from "@mui/material";
 
 interface ProjectCardProps {
   title: string;
@@ -22,7 +22,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
   };
 
   return (
-    <div style={{ paddingBottom: "6vh" }}>
+    <Grid sx={{ paddingBottom: "6vh" }}>
       <Card
         sx={{
           backgroundColor: "#FFFFFF",
@@ -44,44 +44,64 @@ export const ProjectCard = (props: ProjectCardProps) => {
               alignItems: "flex-start",
             }}
           >
-            <div style={{ flex: 1 }}>
+            <Grid sx={{ flex: 1 }}>
               <Typography variant="h4" style={corbelFontStyle}>
                 {props.title}
               </Typography>
-            </div>
+            </Grid>
             <Typography variant="h6" style={corbelFontStyle}>
               {props.workedOn}
             </Typography>
 
-            <hr style={{ width: "100%", border: "1px solid #ccc", borderColor: "black" }} />
+            <hr
+              style={{
+                width: "100%",
+                border: "1px solid #ccc",
+                borderColor: "black",
+              }}
+            />
 
-            <div style={corbelFontStyle}>
-              <Typography sx={{ pt: "10px", fontWeight: "800" }}>The Project</Typography>
-              <Typography>{props.projectText}</Typography>
+            <Typography
+              sx={{ ...corbelFontStyle, pt: "10px", fontWeight: "800" }}
+            >
+              The Project
+            </Typography>
+            <Typography>{props.projectText}</Typography>
 
-              {props.ideaText && (
-                <>
-                  <Typography sx={{ pt: "15px", fontWeight: "800" }}>The Idea</Typography>
-                  <Typography>{props.ideaText}</Typography>
-                </>
-              )}
+            {props.ideaText && (
+              <>
+                <Typography
+                  sx={{ ...corbelFontStyle, pt: "15px", fontWeight: "800" }}
+                >
+                  The Idea
+                </Typography>
+                <Typography>{props.ideaText}</Typography>
+              </>
+            )}
 
-              {props.companyText && (
-                <>
-                  <Typography sx={{ pt: "15px", fontWeight: "800" }}>The Company</Typography>
-                  <Typography>{props.companyText}</Typography>
-                </>
-              )}
+            {props.companyText && (
+              <>
+                <Typography
+                  sx={{ ...corbelFontStyle, pt: "15px", fontWeight: "800" }}
+                >
+                  The Company
+                </Typography>
+                <Typography>{props.companyText}</Typography>
+              </>
+            )}
 
-              <Typography sx={{ pt: "16px", fontWeight: "800" }}>Acquired Knowledge</Typography>
-              <Typography>{props.knowledgeText}</Typography>
+            <Typography
+              sx={{ ...corbelFontStyle, pt: "16px", fontWeight: "800" }}
+            >
+              Acquired Knowledge
+            </Typography>
+            <Typography>{props.knowledgeText}</Typography>
 
-              <Typography style={corbelFontStyle} sx={{ pt: "10px" }}>
-                <a href={props.link} style={linkStyle}>
-                  Link to project
-                </a>
-              </Typography>
-            </div>
+            <Typography sx={{ ...corbelFontStyle, pt: "10px" }}>
+              <Link href={props.link} sx={linkStyle}>
+                Link to project
+              </Link>
+            </Typography>
           </Grid>
 
           {props.image && (
@@ -101,6 +121,6 @@ export const ProjectCard = (props: ProjectCardProps) => {
           )}
         </Grid>
       </Card>
-    </div>
+    </Grid>
   );
 };
