@@ -1,16 +1,16 @@
+import React from "react";
+import Grid from "@mui/material/Grid";
+import MenuItem from "@mui/material/MenuItem";
+import Select from "@mui/material/Select";
+import Typography from "@mui/material/Typography";
+import FormControl from "@mui/material/FormControl";
+import { SelectChangeEvent } from "@mui/material";
+import { useState } from "react";
 import { ProjectCard } from "./ProjectCard";
 import {
   STATIC_PROJECT_DATA_bus,
   STATIC_PROJECT_DATA_tech,
 } from "../staticData/ProjectData";
-import {
-  FormControl,
-  MenuItem,
-  Select,
-  SelectChangeEvent,
-  Typography,
-} from "@mui/material";
-import { useState } from "react";
 
 export const ProjectList = () => {
   const corbelFontStyle = {
@@ -29,38 +29,45 @@ export const ProjectList = () => {
 
   return (
     <>
-      <div
-        style={{
+      <Grid
+        container
+        spacing={2}
+        sx={{
           paddingTop: "150px",
-          display: "flex",
-          flexDirection: "column",
           alignItems: "center",
+          justifyContent: "center",
         }}
       >
-        <Typography
-          variant="h4"
-          style={corbelFontStyle}
-          sx={{ fontWeight: "700" }}
-        >
-          PROJECTS
-        </Typography>
-
-        <FormControl sx={{ m: 1, minWidth: 120 }}>
-          <Select
-            value={option}
-            onChange={handleChange}
-            displayEmpty
-            inputProps={{ "aria-label": "Without label" }}
+        <Grid item>
+          <Typography
+            variant="h4"
+            style={corbelFontStyle}
+            sx={{ fontWeight: "700" }}
           >
-            <MenuItem value={"TechProjects"}>Technical Projects</MenuItem>
-            <MenuItem value={"busProjects"}>Business Projects</MenuItem>
-          </Select>
-        </FormControl>
+            PROJECTS
+          </Typography>
+        </Grid>
+
+        <Grid item>
+          <FormControl sx={{ m: 1, minWidth: 120, pb: 2, pt: 1 }}>
+            <Select
+              value={option}
+              onChange={handleChange}
+              displayEmpty
+              inputProps={{ "aria-label": "Without label" }}
+            >
+              <MenuItem value={"TechProjects"}>Technical Projects</MenuItem>
+              <MenuItem value={"busProjects"}>Business Projects</MenuItem>
+            </Select>
+          </FormControl>
+        </Grid>
 
         {selectedProjectData.map((project, index) => (
-          <ProjectCard key={index} {...project} />
+          <Grid item key={index}>
+            <ProjectCard {...project} />
+          </Grid>
         ))}
-      </div>
+      </Grid>
     </>
   );
 };
