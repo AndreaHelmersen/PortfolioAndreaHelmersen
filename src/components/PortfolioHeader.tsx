@@ -7,13 +7,13 @@ export const PortfolioHeader = () => {
   };
 
   return (
-    <div style={{ padding: "50px" }}>
+    <>
       <Card
         style={{
-          width: "80vw",
+          width: "100%", // Make the card take up 100% of available horizontal space
           padding: "5%", // Adjust padding for responsiveness
-          minHeight: "50vh",
-          backgroundColor: "#F9CB81",
+          minHeight: "80vh",
+          backgroundColor: "#FFFFFF",
           borderRadius: "20px",
           boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)",
         }}
@@ -75,6 +75,6 @@ export const PortfolioHeader = () => {
           </div>
         </div>
       </Card>
-    </div>
+    </>
   );
 };

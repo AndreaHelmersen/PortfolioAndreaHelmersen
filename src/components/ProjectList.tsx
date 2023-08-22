@@ -7,12 +7,12 @@ export const ProjectList = () => {
     fontFamily: "Corbel, Arial, sans-serif",
   };
   return (
-    <div style={{ padding: "100px" }}>
+    <div style={{paddingTop: "150px"}}>
       <div style={{ textAlign: "center" }}>
         <Typography
-          variant="h1"
+          variant="h4"
           style={corbelFontStyle}
-          sx={{ fontWeight: "700" }}
+          sx={{ fontWeight: "700", pb: "20px"}}
         >
           PROJECTS
         </Typography>
