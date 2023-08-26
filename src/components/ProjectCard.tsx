@@ -3,9 +3,9 @@ import { Card, Grid, Link, Typography } from "@mui/material";
 interface ProjectCardProps {
   title: string;
   projectText: string;
-  knowledgeText: string;
-  link: string;
-  workedOn: string;
+  knowledgeText?: string;
+  workedOn?: string;
+  link?: string;
   image?: string;
   ideaText?: string;
   companyText?: string;
@@ -29,29 +29,30 @@ export const ProjectCard = (props: ProjectCardProps) => {
           borderRadius: "20px",
           boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)",
           paddingBottom: "5%", // Adjust padding for responsiveness
-          minHeight: "90vh",
+          minHeight: "50vh",
+          padding: "5%",
+          width: "100%",
         }}
       >
         <Grid container>
           <Grid
             item
-            xs={12}
-            sm={6}
             sx={{
-              padding: "5%",
+              padding: "1%",
               display: "flex",
               flexDirection: "column",
               alignItems: "flex-start",
+              width: "100%",
             }}
           >
-            <Grid sx={{ flex: 1 }}>
-              <Typography variant="h4" style={corbelFontStyle}>
-                {props.title}
-              </Typography>
-            </Grid>
-            <Typography variant="h6" style={corbelFontStyle}>
-              {props.workedOn}
+            <Typography variant="h4" style={corbelFontStyle}>
+              {props.title}
             </Typography>
+            {props.workedOn && (
+              <Typography variant="h6" style={corbelFontStyle}>
+                {props.workedOn}
+              </Typography>
+            )}
 
             <hr
               style={{
@@ -66,7 +67,14 @@ export const ProjectCard = (props: ProjectCardProps) => {
             >
               The Project
             </Typography>
-            <Typography>{props.projectText}</Typography>
+            <Typography
+              sx={{
+                maxWidth: "100%", // Set a maximum width
+              }}
+              dangerouslySetInnerHTML={{
+                __html: props.projectText.replace(/\n/g, "<br />"),
+              }}
+            ></Typography>
 
             {props.ideaText && (
               <>
@@ -90,22 +98,28 @@ export const ProjectCard = (props: ProjectCardProps) => {
               </>
             )}
 
-            <Typography
-              sx={{ ...corbelFontStyle, pt: "16px", fontWeight: "800" }}
-            >
-              Acquired Knowledge
-            </Typography>
-            <Typography>{props.knowledgeText}</Typography>
+            {props.knowledgeText && (
+              <Grid>
+                <Typography
+                  sx={{ ...corbelFontStyle, pt: "16px", fontWeight: "800" }}
+                >
+                  Acquired Knowledge
+                </Typography>
+                <Typography>{props.knowledgeText}</Typography>
+              </Grid>
+            )}
 
-            <Typography sx={{ ...corbelFontStyle, pt: "10px" }}>
-              <Link href={props.link} sx={linkStyle}>
-                Link to project
-              </Link>
-            </Typography>
+            {props.link && (
+              <Typography sx={{ ...corbelFontStyle, pt: "10px" }}>
+                <Link href={props.link} sx={linkStyle}>
+                  Link to project
+                </Link>
+              </Typography>
+            )}
           </Grid>
 
           {props.image && (
-            <Grid item xs={12} sm={6} sx={{ padding: "5%" }}>
+            <Grid item sx={{ padding: "1%" }}>
               <img
                 src={props.image}
                 alt="Project Image"
