@@ -21,7 +21,7 @@ export const STATIC_PROJECT_DATA_tech = [
     projectText:
       "I built my portfolio with React and TypeScript, using Material-UI for the design. I created it using the experiance i gained during my summer internship in Experis. It's now hosted using GitHub Pages, and here you are :) . I had never depolyed something to be hosted before and I think that was a very good learning experience. The reason i wanted to create a website using React was that it is now much easier to add to my portfolio than it was before.",
     knowledgeText:
-      "React, Typescript, Material for UI",
+      "React, Typescript, Material for UI, Github, Github Pages",
     link: "https://github.com/AndreaHelmersen/PortfolioAndreaHelmersen",
     workedOn: "Autumn 2023",
   },
