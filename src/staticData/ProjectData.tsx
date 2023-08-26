@@ -7,13 +7,12 @@ import Experis from "../Images/Experis_bilde.jpg"
 
 export const STATIC_PROJECT_DATA_tech = [
   {
-    title: "Dissimilis summer Internship",
+    title: "Dissimilis summer internship",
     projectText:
     "During the summer of 2023, I worked at Experis, with further improving Dissimilis' color notation app. Dissimilis have developed a color-based music notation system for children facing various challenges. Our 12-member team (comprising 3 designers and 9 developers) had a primary focus of doubeling the user base and enhance user-friendliness. We introduced features such as group functions, playlists, admin user management, song favoriting, filtering of songs, and editable information pages.\n\nWe were entrusted with significant responsibility for the project, which i think further motivated us to work hard and to it well, following agile principles with one-week sprints. I worked on both frontend (React + TypeScript) and backend (ASP.NET in C# with Entity Framework). This dual-role helped me understand the entire feature implementation process. \n\nWorking with this exceptional team was a highlight; everyone got along great and teamwork was seamless. We also enjoyed many social afterwork-nights with 'fussball' tournaments and other activities. This job was a valuable learning opportunity, as it was my first chance to develop something used by others and it's an experience I'll carry forward.",
     knowledgeText:
     "React, TypeScript, Material for UI, .Net web API, C#, Entity Framework (EF), teamwork, Agile teamwork, collaboration, pair programming, collaborating with designers, basics of database migrations, version control with GitHub, testing (basics of end-to-end testing and unit testing).",
     companyText: "The Dissimilis project is a pro bono project run by Experis Solutions.",
-    link: "https://github.com/AndreaHelmersen/PortfolioAndreaHelmersen",
     workedOn: "Summer 2023",
     image: Experis,
   },
