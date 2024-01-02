@@ -4,8 +4,19 @@ import Bewere from "../Images/Bewere.png";
 import Tise from "../Images/Tise.png";
 import NG from "../Images/NG.png";
 import Experis from "../Images/Experis_bilde.jpg"
+import CommodityApp from "../Images/CommodityApp.png" 
 
 export const STATIC_PROJECT_DATA_tech = [
+  {
+    title: "Stock managment app for health organizations",
+    projectText: 
+    "This web app was created as a part of the IN5320 platform ecosystem development course, with a team of five students.\n\n We had the flexibility to choose features for our health commodity stock management app. The first feture is the overview page, which provides insights into commodity trends, shipment schedules, monthly dispense counts, and an in-depth stock balance chart. Additionally, the app includes a vertical navigation bar for easy access to a range of functionalities, such as a detailed commodity data table, dispensing capabilities, and other stock management tools for replenishing stock and recounting stock. All transaction records are recorded and can be accessed across different sections of the app.\n\nFor development, we used React, JavaScript, and CSS, incorporating the DHIS2 UI library and course APIs and datastores. Our design process followed established principles, with prototyping done in Figma using the provided DHIS2 UI components. We adopted an iterative development approach, with weekly sprints focusing on planning, implementation, and testing.\n\n A significant learning experience was optimizing the app's performance to minimize resource usage, particularly reducing unnecessary API calls and re-renders. This aspect was a key focus of my contributions to the project.",
+    knowledgeText:
+    "React, JavaScript, HTML, CSS, using another UI library, API CRUD operations, teamwork, Agile teamwork, collaboration, pair programming, version control with GitHub",
+    workedOn: "Autumn 2024",
+    link: "https://gitfront.io/r/AndreaHelmersen/LeC9c52Wxnms/DHIS2-Commodity-management-app/",
+    image: CommodityApp,
+  },
   {
     title: "Dissimilis summer internship",
     projectText:
@@ -51,6 +62,28 @@ export const STATIC_PROJECT_DATA_tech = [
 
 export const STATIC_PROJECT_DATA_bus = [
   {
+    title: "Study of usage of AI in Vipps",
+    projectText:
+      "The project invloved getting into contact with a 'digital ecosystem' company and finding an intresting research question to study in the chosen company. We came into contact with Vipps and our reseach question became 'How can digital platform ecosystems leverage AI, to create and enhance non-economic value?' The project was for the couse IN4150 Digital Ecosystems.",
+    companyText:
+      "The company we worked with in this project was Vipps, which is a digital platform transaction ecosystem.",
+    knowledgeText:
+      "Tamwork, digital ecosystem litterature, AI ethics, conducting interview, research.",
+    link: "https://drive.google.com/file/d/1v_zQ_a-02J-muj019sUP1uDttY8l-ENt/view?usp=drive_link",
+    workedOn: "Autumn 2024",
+  },
+  {
+    title: "ROAF Harvard business case",
+    projectText:
+      "The project invoved getting into contact with a company and finding and intresting story to tell about their business development or a current problem they where facing. The project was to be written in a harvard business case teaching style, which can be used for class discussion. The project was for the class IN4270 Digital business development.",
+    companyText:
+      "The company we worked with in this project was ROAF, Romerike Avfallsforedling IKS, which is a intermunicipal waste managment organization.",
+    knowledgeText:
+      "Teamwork, digital business development, research, conducting interviews.",
+    link: "https://drive.google.com/file/d/18fT217zbqHacGP3LYlNY7GYNYnXXx7tB/view?usp=sharing",
+    workedOn: "Autumn 2024",
+  },
+  {
     title: "Decon-X",
     projectText:
       "The project involved conducting various strategic analyses based on interviews conducted with a selected company, as well as identifying a strategic challenge. Based on the challenge, we developed three marketing strategies to 'address' the challenge and created an action plan for the best solution.",
@@ -58,7 +91,7 @@ export const STATIC_PROJECT_DATA_bus = [
       "The company we worked with for this project was Decon-X. They provide an automated disinfection robot.",
     knowledgeText:
       "Strategic analysis (PESTEL, Five Forces, VRIO, SWOT, etc.), developing strategic solutions, strategic planning, marketing strategies, interview techniques, teamwork.",
-    link: "https://gitfront.io/r/AndreaHelmersen/Eo62QB3V989J/Decon-X/",
+    link: "https://drive.google.com/file/d/1N3804hZsH82Cppwryx_-D2alJb-NXQZj/view?usp=sharing",
     image: deconXImage,
     workedOn: "Spring 2022",
   },
@@ -70,7 +103,7 @@ export const STATIC_PROJECT_DATA_bus = [
       "In this project we worked with Norsk gjenvinning (NG), translated to Norwegian Recycling",
     knowledgeText:
       "Digital transformation, change management and resistance, assessment of organizational culture and environments, formulation of measures to achieve a desired future (measures for structure, leadership, and change strategy), teamwork.",
-    link: "https://gitfront.io/r/AndreaHelmersen/d3d9f53f86a99d61ab5f529f4298894952e66a2b/Digital-transformasjon-av-NG/",
+    link: "https://drive.google.com/file/d/1g2N-yFr5HbuWXjV8SZE50D9HpaBPupi6/view?usp=drive_link",
     image: NG,
     workedOn: "Autumn 2021",
   },
@@ -80,7 +113,7 @@ export const STATIC_PROJECT_DATA_bus = [
       "In this project, we started with a product from a Norwegian high-tech company, mainly developing a plan for the product, distribution, pricing, and marketing communication for the selected target audience in 2022. The chosen product was Tise's sharing economy platform, primarily for the used clothing market.",
     knowledgeText:
       "Analysis of microenvironments, assessment of competitive advantages ('Sweet Spot'), market segmentation, market research, marketing plan development, teamwork.",
-    link: "gitfront.io/r/AndreaHelmersen/1c2a35fad9c12503c16a010c281db885c3387e9c/Prosjektoppgave-Tise/",
+    link: "https://drive.google.com/file/d/10cjFwEKGCuy4ey9dEXVAwo81rSXNt-Cv/view?usp=sharing",
     image: Tise,
     workedOn: "Spring 2021",
   },
