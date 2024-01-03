@@ -71,6 +71,12 @@ export const PortfolioHeader = () => {
                   </a>
                 </Typography>
               </Grid>
+
+              <Grid item xs={12} style={{ display: "block", paddingTop: "70px" }}>
+                <Typography variant="body1" style={corbelFontStyle}>
+                  Scroll down for projects :)
+                </Typography>
+              </Grid>
             </Grid>
           </div>
         </div>
